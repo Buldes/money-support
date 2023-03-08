@@ -1,5 +1,4 @@
 import React from "react";
-import { UpdateCIL } from "../Functions/updateCIL.js";
 import { bgColorR1 } from "../Styles/backGroundColor.js";
 import { centering } from "../Styles/Look.js";
 import { DefaultButton } from "./defaultButton.js";

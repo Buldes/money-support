@@ -2,7 +2,6 @@ import React from "react";
 import { bgColor2e, bgColor5e , bgColorR2, bgColorGreen } from "../Styles/backGroundColor";
 import { Headline } from "../Lable/HeadLines";
 import { MonthlyPieChart } from "../Charts/PieCharts/monthlyPieChart";
-import { exampleData } from "../Data/list";
 
 export function PieChartComponent(props){
 

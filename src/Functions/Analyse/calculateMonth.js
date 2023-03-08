@@ -6,7 +6,7 @@ export function CalculateMonthAvarge(){
 
     var totalCost = 0
 
-    for (let i = 1; i != 13; i++){
+    for (let i = 1; i !== 13; i++){
         totalCost = totalCost + parseFloat(incomCostMonthly[i][1].amount)
     }
 

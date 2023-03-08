@@ -1,4 +1,3 @@
-import { monthIncomm } from "../Data/float";
 import { UpdateCIL } from "./updateCIL";
 import { BankBalanceLableUdate, SmallInfoUpdate } from "./UpdateKomponentsUpArear";
 
