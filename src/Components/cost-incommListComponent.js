@@ -19,7 +19,7 @@ export function CILComponent(props){
             <div>
               <div style={{display:"flex", flexDirection: "column", justifyContent:"flex-start", backgroundColor:bgColor2, width:(componentWidth-55), 
                            height:(componenHeight-100) ,border:listBorder, borderRadius:listBorderRadius, position:"relative", top:50, left:-475, 
-                           overflowY:"scroll", overflowX:"hidden", direction:"rtl"}}>
+                           overflowY:"auto", overflowX:"hidden", direction:"rtl"}}>
               <div>
                 {props.sortBar}
               </div>
