@@ -1,4 +1,5 @@
-import { monthCost, monthCostAvarge } from "../Data/float";
+import { PieChartComponent } from "../Components/defaultPieChartComponent";
+import { monthCost, monthCostAvarge, monthIncomm } from "../Data/float";
 import { exampleData } from "../Data/list";
 import { CalculateMonthAvarge } from "./Analyse/calculateMonth";
 
@@ -21,4 +22,8 @@ export function SmallInfoUpdate(){
     CalculateMonthAvarge()
     document.getElementById("MonthCostAvarge").textContent = "Durchschnitt: " + parseFloat(monthCostAvarge).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
     document.getElementById("MonthCost").textContent = "Diesen Monat: " + parseFloat(monthCost).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
+}
+
+export function PieChartUpdate(){
+    return <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-340px" left="10%"/>
 }

@@ -11,11 +11,13 @@ import { CILAddBar } from './Components/CILaddKomponent';
 import { CILSortBar } from './Components/CILSortComponent';
 import { GenerateData } from './Functions/DataFunctions/generateData';
 import { exampleData } from './Data/list';
-import { CalculateMonthAvarge } from './Functions/Analyse/calculateMonth';
+import { Initialization } from './Functions/StartFunction';
+import { HardDataReset } from './Functions/DataFunctions/ClearData';
 
 function App() {
   useEffect(() => { document.title = `Kontostand`; });
-  CalculateMonthAvarge()
+
+  Initialization()
 
   return (
     <div className='App'>
@@ -30,6 +32,8 @@ function App() {
 
      </div>
       <button onClick={GenerateData}>GenerateData</button>
+      <button onClick={HardDataReset} style={{color:"red"}}>Hard Rest</button>
+
       <div className='down-arear' style={downArearStyle}>
           <CILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={CILSortBar()}/> 
       </div>

@@ -38,3 +38,12 @@ export function sortDataByStatus(){
     setSortUpDown([1, 1, sortUpDown[2]*-1])
     UpdateCIL()
 }
+
+export function ResetSorting(){
+    exampleData.sort(function(a, b) {
+        // Vergleiche ID
+        if (a.id < b.id) return -1
+        if (a.id > b.id) return 1
+        return 0;
+      })
+}

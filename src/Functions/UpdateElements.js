@@ -1,8 +1,9 @@
 import { UpdateCIL } from "./updateCIL";
-import { BankBalanceLableUdate, SmallInfoUpdate } from "./UpdateKomponentsUpArear";
+import { BankBalanceLableUdate, PieChartUpdate, SmallInfoUpdate } from "./UpdateKomponentsUpArear";
 
 export function UpdateElemets(){
     SmallInfoUpdate()
     BankBalanceLableUdate()
     UpdateCIL()
+    PieChartUpdate()
 }
