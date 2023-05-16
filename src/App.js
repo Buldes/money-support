@@ -13,18 +13,23 @@ import { GenerateData } from './Functions/DataFunctions/generateData';
 import { exampleData } from './Data/list';
 import { Initialization } from './Functions/StartFunction';
 import { HardDataReset } from './Functions/DataFunctions/ClearData';
+import { BankBalanceLableUdate } from './Functions/UpdateKomponentsUpArear';
 
 function App() {
-  useEffect(() => { document.title = `Kontostand`; });
+  useEffect(() => { 
+    document.title = `Kontostand`; 
+    BankBalanceLableUdate()});
+  
+    Initialization()
 
-  Initialization()
+    console.log(exampleData)
 
   return (
     <div className='App'>
 
       <div className='up-area' style={upArearStyle}>
 
-        <BankBalanceLable text={exampleData[exampleData.length-1].bankBalance}/>
+        <BankBalanceLable text={"Loading..."}/>
 
         <SmallInfoComponent cost={monthCost} avarge={monthCostAvarge}/>
 

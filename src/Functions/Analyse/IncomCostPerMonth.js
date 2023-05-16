@@ -5,6 +5,7 @@ export var incomCostMonthly = {1:[], 2:[], 3:[], 4:[], 5:[], 6:[], 7:[], 8:[], 9
 export function IncomCostMonthlyGenerate(){
 
     DataSorting()
+
     incomCostMonthly = {1:[], 2:[], 3:[], 4:[], 5:[], 6:[], 7:[], 8:[], 9:[], 10:[], 11:[], 12:[], current:[]}
 
     for (let i = 1; i !== 13; i++){
@@ -21,7 +22,7 @@ export function IncomCostMonthlyGenerate(){
             }
         }
 
-        incomCostMonthly[i].push(totalCost, totalIncom)
+        incomCostMonthly[i].push(totalCost, totalIncom) // example: {1: [12.3, 18.3]}
     }
 
     totalCost = {amount:0, count:0}

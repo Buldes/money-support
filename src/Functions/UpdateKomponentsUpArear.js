@@ -2,8 +2,10 @@ import { PieChartComponent } from "../Components/defaultPieChartComponent";
 import { monthCost, monthCostAvarge, monthIncomm } from "../Data/float";
 import { exampleData } from "../Data/list";
 import { CalculateMonthAvarge } from "./Analyse/calculateMonth";
+import { ResetSorting } from "./DataFunctions/sort";
 
 export function BankBalanceLableUdate(){
+    ResetSorting()
     const dataCopie = exampleData
 
     dataCopie.sort(function(a, b){

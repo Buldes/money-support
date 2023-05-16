@@ -15,7 +15,7 @@ export function GenerateData(){
             if (newState === "Einkommen") newBankBalance = parseFloat(exampleData[exampleData.length-1].bankBalance) + parseFloat(newAmout)
             else newBankBalance = parseFloat(exampleData[exampleData.length-1].bankBalance) - newAmout
 
-            var newData = {id:exampleData.length, state:newState, date:{day:(Math.random()*31).toFixed(0), month:Month+1, year:"2022"}, amount:newAmout, bankBalance:newBankBalance.toFixed(2)}
+            var newData = {id:exampleData.length, state:newState, date:{day:(Math.random()*31).toFixed(0), month:Month+1, year:"2022"}, amount:parseFloat(newAmout), bankBalance:newBankBalance.toFixed(2)}
 
             exampleData.push(newData)
         }

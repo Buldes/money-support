@@ -12,7 +12,7 @@ export function addData(props){
 
   // adding data
   var newData = {id: exampleData.length, state:props.newState, 
-                date: {day: props.newDay, month: props.newMonth, year: props.newYear}, amount: props.newAmount, bankBalance:newBankBalance}
+                date: {day: props.newDay, month: props.newMonth, year: props.newYear}, amount:parseFloat(props.newAmount), bankBalance:newBankBalance}
   exampleData.push(newData)
 
   // save data
