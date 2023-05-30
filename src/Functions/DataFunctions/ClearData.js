@@ -8,5 +8,7 @@ export function HardDataReset(){
         //clear data
         ClearData()
         UpdateElemets()
+        // Reload Website
+        window.location.reload();
     }
 }

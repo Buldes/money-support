@@ -17,6 +17,7 @@ export function addData(props){
 
   // save data
   SaveData()
-  // Update elements
+  // Update elements and make list correct
+  exampleData.reverse()
   UpdateElemets()
 } 
