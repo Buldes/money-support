@@ -12,7 +12,7 @@ export function DefaultPieChart(props){
                             labels: {fontSize: 20, fill: "#ffffff"}, transform:"flex"}}/>
     }*/
 
-    return <VictoryPie data={props.data} animate={{duration:2000}}
+    return <VictoryPie data={props.data} animate={{duration:2000, onLoad: { duration: 1000 }}}
                         innerRadius={props.innerRadius} cornerRadius={props.cornerRadius} 
                         colorScale={props.colors}
                         style={{

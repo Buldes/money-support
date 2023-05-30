@@ -8,8 +8,8 @@ export function manuelAddData(){
 
     // get datas
     const select = document.getElementById("ListDropBox")
-    const selectedValue = select.options[select.selectedIndex].value;
-    const amoutInput = parseFloat(inputAmout).toFixed(2)
+    const selectedValue = select.options[select.selectedIndex].value
+    const amoutInput = parseFloat(inputAmout.replace(",", ".")).toFixed(2)
     const currentDate = new Date();
 
     // check if input is ok

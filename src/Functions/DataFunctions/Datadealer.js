@@ -4,6 +4,10 @@ export function SaveData(){
     localStorage.setItem("data", JSON.stringify(exampleData))
 }
 
+export function ClearData(){
+    localStorage.removeItem('data');
+}
+
 export function GetData(){
     const dataGet = JSON.parse(localStorage.getItem("data"))
     

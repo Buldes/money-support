@@ -7,10 +7,12 @@ export function Initialization(){
     // get data
     var storageData = GetData()
 
+    // add data for "welcome"
+    var date = new Date()
     if (storageData === "no data"){
-        storageData = [{id: 0, state: "Initialization", date: {day: 1, month: 5, year: 2023}, amount: 0, bankBalance:0},
-                        {id: 1, state: "Ausgaben", date: {day: 1, month: 5, year: 2023}, amount: 12.56, bankBalance:85.36},
-                        {id: 2, state: "Einkommen", date: {day: 3, month: 5, year: 2023}, amount: 20, bankBalance:85.36}]
+        storageData = [{id: 0, state: "Initialization", date: {day: date.getDate(), month: date.getMonth() + 1, year: date.getFullYear()}, amount: 0, bankBalance:0},
+                        {id: 1, state: "Einkommen", date: {day: date.getDate() - 3, month: date.getMonth() + 1, year: date.getFullYear()}, amount: 1, bankBalance:0.5},
+                        {id: 2, state: "Ausgaben", date: {day: date.getDate(), month: date.getMonth() + 1, year: date.getFullYear()}, amount: 1, bankBalance:0}]
     }
     
 

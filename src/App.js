@@ -10,19 +10,18 @@ import { GenerateCIL } from './Functions/generateCILItem';
 import { CILAddBar } from './Components/CILaddKomponent';
 import { CILSortBar } from './Components/CILSortComponent';
 import { GenerateData } from './Functions/DataFunctions/generateData';
-import { exampleData } from './Data/list';
 import { Initialization } from './Functions/StartFunction';
 import { HardDataReset } from './Functions/DataFunctions/ClearData';
 import { BankBalanceLableUdate } from './Functions/UpdateKomponentsUpArear';
+import { TrippleLineChart } from './Components/Month-YearlyLineChhart';
+import { victoryLineData } from './Data/list';
 
 function App() {
   useEffect(() => { 
-    document.title = `Kontostand`; 
+    document.title = `Money Support`; 
     BankBalanceLableUdate()});
   
     Initialization()
-
-    console.log(exampleData)
 
   return (
     <div className='App'>
@@ -40,9 +39,13 @@ function App() {
       <button onClick={HardDataReset} style={{color:"red"}}>Hard Rest</button>
 
       <div className='down-arear' style={downArearStyle}>
-          <CILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={CILSortBar()}/> 
-      </div>
+        
+        <CILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={CILSortBar()}/> 
+        
+        <TrippleLineChart headLine="Monatlich" data={victoryLineData[0]}/>
+        <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop="-480px"/>
 
+      </div>
     </div>
   );
 }

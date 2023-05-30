@@ -18,19 +18,19 @@ export function CalculateChartData(){
 
             //check if element is cost or incomm
             if (element.state === "Einkommen"){
-                victoryLineData[0][1][element.date.day] = parseFloat(victoryLineData[0][1][element.date.day]) + parseFloat(element.amount)
+                victoryLineData[0][1][parseFloat(element.date.day - 1)].y = parseFloat(victoryLineData[0][1][parseFloat(element.date.day - 1)].y) + parseFloat(element.amount)
             }
             else if (element.state === "Ausgaben"){
-                victoryLineData[0][2][element.date.day] = parseFloat(victoryLineData[0][2][element.date.day]) + parseFloat(element.amount)
+                victoryLineData[0][2][parseFloat(element.date.day - 1)].y = parseFloat(victoryLineData[0][2][parseFloat(element.date.day - 1)].y) + parseFloat(element.amount)
             }
         
         }
         else{
             // set new data
-            if (element.state !== "Initialization") victoryLineData[0][0][element.date.day] = element.bankBalance
+            if (element.state !== "Initialization") victoryLineData[0][0][element.date.day - 1].y = element.bankBalance
 
-            if (element.state === "Einkommen") victoryLineData[0][1][element.date.day] = element.amount
-            else if (element.state === "Ausgaben") victoryLineData[0][2][element.date.day] = element.amount
+            if (element.state === "Einkommen") victoryLineData[0][1][element.date.day - 1].y = element.amount
+            else if (element.state === "Ausgaben") victoryLineData[0][2][element.date.day - 1].y = element.amount
         }
 
         //set day for next
@@ -64,7 +64,9 @@ export function CalculateChartData(){
     var num = 0
     cachLastYear.forEach(element => {
         num++
-        victoryLineData[1][0][num] = element[0]
-        victoryLineData[1][1][num] = element[1]
+        victoryLineData[1][1][num - 1].y = element[0]
+        victoryLineData[1][2][num - 1].y = element[1]
     });
+
+    console.log(victoryLineData)
 }
