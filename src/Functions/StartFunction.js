@@ -2,6 +2,7 @@ import { setExampleData } from "../Data/list";
 import { CalculateMonthAvarge } from "./Analyse/calculateMonth";
 import { CalculateChartData } from "./DataFunctions/ChartData";
 import { GetData } from "./DataFunctions/Datadealer";
+import { GetAspectRatio } from "./sreen";
 
 export function Initialization(){
     // get data
@@ -21,4 +22,7 @@ export function Initialization(){
     //calculate
     CalculateMonthAvarge()
     CalculateChartData()
+
+    // Aspect Ratio
+    GetAspectRatio()
 }
