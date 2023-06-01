@@ -37,7 +37,7 @@ export function Laptop(){
 
             <TrippleLineChart headLine="Monatlich" data={victoryLineData[0]}/>
             <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop="-480px"/>
-            <Headline text={GetAspectRatio()}/>
+            <Headline text={"Aspect-Ratio: " + GetAspectRatio()}/>
 
           </div>
         
