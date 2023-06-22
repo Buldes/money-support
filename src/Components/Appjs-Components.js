@@ -58,8 +58,8 @@ export function Mobile(){
            {/* <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-340px" left="10%"/> */}
 
          </div>
-          {/*<button onClick={GenerateData}>GenerateData</button>
-          <button onClick={HardDataReset} style={{color:"red"}}>Hard Rest</button>*/}
+          {/*<button onClick={GenerateData}>GenerateData</button>*/}
+          <button onClick={HardDataReset} style={{color:"red", fontSize:15}}>Hard Rest</button>
 
           <div className='down-arear' style={Object.assign({}, downArearStyle, {height:"700px"})}>
 
