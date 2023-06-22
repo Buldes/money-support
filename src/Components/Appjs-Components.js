@@ -5,7 +5,7 @@ import { monthCostAvarge, monthCost, monthIncomm } from "../Data/float"
 import { PieChartComponent } from "./defaultPieChartComponent"
 import { GenerateData } from "../Functions/DataFunctions/generateData"
 import { HardDataReset } from "../Functions/DataFunctions/ClearData"
-import { MobileSmallInfo, SmallInfoComponent } from "./smallInfoComponent"
+import { SmallInfoComponent } from "./smallInfoComponent"
 import { CILAddBar } from "./CILaddKomponent"
 import { CILSortBar, MobileCILSortBar } from "./CILSortComponent"
 import { CILComponent, MobileCILComponent } from './cost-incommListComponent';
@@ -53,7 +53,7 @@ export function Mobile(){
 
             <BankBalanceLable text={"Loading..."} top={20} size="250px" fontSize="50px"/>
 
-            <MobileSmallInfo cost={monthCost} avarge={monthCostAvarge}/>
+            <SmallInfoComponent cost={monthCost} avarge={monthCostAvarge}/>
 
            {/* <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-340px" left="10%"/> */}
 

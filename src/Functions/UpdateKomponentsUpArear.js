@@ -1,4 +1,5 @@
 import { PieChartComponent } from "../Components/defaultPieChartComponent";
+import { mobileDevice } from "../Data/bool";
 import { monthCost, monthCostAvarge, monthIncomm } from "../Data/float";
 import { exampleData } from "../Data/list";
 import { CalculateMonthAvarge } from "./Analyse/calculateMonth";
@@ -22,10 +23,18 @@ export function BankBalanceLableUdate(){
 
 export function SmallInfoUpdate(){
     CalculateMonthAvarge()
-    document.getElementById("MonthCostAvarge").textContent = "Durchschnitt: " + parseFloat(monthCostAvarge).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
-    document.getElementById("MonthCost").textContent = "Diesen Monat: " + parseFloat(monthCost).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
-}
 
+    if (!mobileDevice){
+        document.getElementById("MonthCostAvarge").textContent = "Durchschnitt: " + parseFloat(monthCostAvarge).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
+        document.getElementById("MonthCost").textContent = "Diesen Monat: " + parseFloat(monthCost).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
+    }
+
+    else
+    {
+        document.getElementById("MonthCostAvarge").textContent = "Durchschnitt\n" + parseFloat(monthCostAvarge).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
+        document.getElementById("MonthCost").textContent = "Diesen Monat\n" + parseFloat(monthCost).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
+    }
+}
 export function PieChartUpdate(){
     return <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-340px" left="10%"/>
 }

@@ -32,3 +32,19 @@ export function CILItem(props){
 
       </div>)
     }
+
+    export function MobileCILItem(props){
+      var textAmout = parseFloat(props.amount).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2, style: 'currency', currency: 'EUR'})
+      const fontSize = 17
+
+      return (
+        <div style={{margin: "5px -65px", height: 30, width: 300, borderRadius: "3px", backgroundColor:bgColor2e, display: 'flex', position: "relative", top: props.y, left:props.x, alignItems: "center", direction:"ltr"}} >
+          
+          <ListLable text={props.state} id={props.id} width="95px" left="3px" fontSize={fontSize}/>
+  
+          <ListLable text={props.date} id={props.id} width="95px" left="8px" fontSize={fontSize}/>
+  
+          <ListLable text={textAmout} id={props.id} width="95px" left="13px" fontSize={fontSize}/>
+  
+        </div>)
+      }

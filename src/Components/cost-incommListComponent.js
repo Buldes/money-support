@@ -58,10 +58,10 @@ export function MobileCILComponent(props){
               {props.sortBar}
             </div>
 
-              {/*props.generateList*/}
+              {props.generateList}
             </div>
 
-              {/*props.addBar*/}
+              {props.addBar}
 
           </div>
 

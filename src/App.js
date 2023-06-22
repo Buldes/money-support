@@ -4,6 +4,7 @@ import { Initialization } from './Functions/StartFunction';
 import { BankBalanceLableUdate } from './Functions/UpdateKomponentsUpArear';
 import { Laptop, Mobile } from './Components/Appjs-Components';
 import { GetAspectRatio } from './Functions/sreen';
+import { setMobileDevice } from './Data/bool';
 
 function App() {
   useEffect(() => { 
@@ -13,7 +14,10 @@ function App() {
     Initialization()
 
   if (GetAspectRatio() >= 1) return <Laptop/> 
-  else return <Mobile/> 
+  else{ 
+    setMobileDevice(true)
+    return <Mobile/> 
+  }
 }
 
 export default App;
