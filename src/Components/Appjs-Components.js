@@ -3,7 +3,6 @@ import { BankBalanceLable } from "../Lable/bankBalanceLable"
 import { downArearStyle, upArearStyle } from "../Styles/arearStyles"
 import { monthCostAvarge, monthCost, monthIncomm } from "../Data/float"
 import { PieChartComponent } from "./defaultPieChartComponent"
-import { HardDataReset } from "../Functions/DataFunctions/ClearData"
 import { SmallInfoComponent } from "./smallInfoComponent"
 import { CILAddBar } from "./CILaddKomponent"
 import { CILSortBar, MobileCILSortBar } from "./CILSortComponent"
@@ -55,8 +54,16 @@ export function Laptop(){
 }
 
 export function Mobile(){
+  const [openModal, setOpenModal] = useState(false)
     return( 
         <div className='App'>
+          
+          <div>
+            <InfoDropBox options={existed_keys} top={10} fontSize={20} height={35} left={20} width="80%"/>
+            
+            <IconButton click={() => setOpenModal(true)} top={-25} left={10} icon={faGear} width={33} height={33} size="lg" borderRadius={10}/>
+            <SettingsModal open={openModal} onClose={()=> setOpenModal(false)}/>
+          </div>
 
           <div className='up-area' style={Object.assign({}, upArearStyle, {height:"430px"})}>
 
@@ -67,8 +74,6 @@ export function Mobile(){
            {/* <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-340px" left="10%"/> */}
 
          </div>
-          {/*<button onClick={GenerateData}>GenerateData</button>*/}
-          <button onClick={HardDataReset} style={{color:"red", fontSize:15}}>Hard Rest</button>
 
           <div className='down-arear' style={Object.assign({}, downArearStyle, {height:"700px"})}>
 
