@@ -1,9 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { BankBalanceLable } from "../Lable/bankBalanceLable"
 import { downArearStyle, upArearStyle } from "../Styles/arearStyles"
 import { monthCostAvarge, monthCost, monthIncomm } from "../Data/float"
 import { PieChartComponent } from "./defaultPieChartComponent"
-import { GenerateData } from "../Functions/DataFunctions/generateData"
 import { HardDataReset } from "../Functions/DataFunctions/ClearData"
 import { SmallInfoComponent } from "./smallInfoComponent"
 import { CILAddBar } from "./CILaddKomponent"
@@ -11,13 +10,25 @@ import { CILSortBar, MobileCILSortBar } from "./CILSortComponent"
 import { CILComponent, MobileCILComponent } from './cost-incommListComponent';
 import { GenerateCIL } from "../Functions/generateCILItem"
 import { TrippleLineChart } from "./Month-YearlyLineChhart"
-import { victoryLineData } from "../Data/list"
+import { existed_keys, victoryLineData } from "../Data/list"
 import { Headline } from "../Lable/HeadLines"
 import { GetAspectRatio } from "../Functions/sreen"
+import { InfoDropBox } from "../DropBox/choiceDropBox"
+import { SettingsModal } from "../Modal/SettingsModal"
+import { IconButton } from "../Buttons/IconButton"
+import { faGear } from '@fortawesome/free-solid-svg-icons'
 
 export function Laptop(){
+  const [openModal, setOpenModal] = useState(false)
     return( 
         <div className='App'>
+          <div>
+            <InfoDropBox options={existed_keys} top={30}/>
+            
+            <IconButton click={() => setOpenModal(true)} top={-15} left={10} icon={faGear}/>
+            <SettingsModal open={openModal} onClose={()=> setOpenModal(false)}/>
+          </div>
+
 
           <div className='up-area' style={upArearStyle}>
 
@@ -28,8 +39,6 @@ export function Laptop(){
             <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-340px" left="10%"/>
 
          </div>
-          <button onClick={GenerateData}>GenerateData</button>
-          <button onClick={HardDataReset} style={{color:"red"}}>Hard Rest</button>
 
           <div className='down-arear' style={downArearStyle}>
 

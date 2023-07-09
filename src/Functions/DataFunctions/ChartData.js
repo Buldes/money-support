@@ -67,6 +67,4 @@ export function CalculateChartData(){
         victoryLineData[1][1][num - 1].y = element[0]
         victoryLineData[1][2][num - 1].y = element[1]
     });
-
-    console.log(victoryLineData)
 }

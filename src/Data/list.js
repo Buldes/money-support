@@ -23,3 +23,9 @@ export var sortUpDown = [1, 1, 1]
 export const setSortUpDown = (value) => {
     sortUpDown = value
 }
+
+export var existed_keys = []
+
+export const setExistedKeys = (value) => {
+    existed_keys = value
+}

@@ -1,6 +1,6 @@
 import { exampleData } from "../../Data/list"
 import { UpdateElemets } from "../UpdateElements"
-import { SaveData } from "./Datadealer"
+import { GetCurrentChoice, SaveData } from "./Datadealer"
 
 export function addData(props){
 
@@ -16,7 +16,7 @@ export function addData(props){
   exampleData.push(newData)
 
   // save data
-  SaveData()
+  SaveData(GetCurrentChoice())
   // Update elements and make list correct
   exampleData.reverse()
   UpdateElemets()
