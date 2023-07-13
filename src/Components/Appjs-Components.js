@@ -24,7 +24,7 @@ export function Laptop(){
           <div>
             <InfoDropBox options={existed_keys} top={30}/>
             
-            <IconButton click={() => setOpenModal(true)} top={-15} left={10} icon={faGear}/>
+            <IconButton click={() => setOpenModal(true)} top={-10} left={10} icon={faGear}/>
             <SettingsModal open={openModal} onClose={()=> setOpenModal(false)}/>
           </div>
 
@@ -35,7 +35,7 @@ export function Laptop(){
 
             <SmallInfoComponent cost={monthCost} avarge={monthCostAvarge}/>
 
-            <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-340px" left="10%"/>
+            <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-325px" left="5%"/>
 
          </div>
 
@@ -52,7 +52,42 @@ export function Laptop(){
         </div>
     )
 }
+export function Tablet(){
+  const [openModal, setOpenModal] = useState(false)
+  return (
+    <div className='App'>
+          <div>
+            <InfoDropBox options={existed_keys} top={30} width="85%"/>
+            
+            <IconButton click={() => setOpenModal(true)} top={-10} left={10} icon={faGear}/>
+            <SettingsModal open={openModal} onClose={()=> setOpenModal(false)}/>
+          </div>
 
+
+          <div className='up-area' style={upArearStyle}>
+
+            <BankBalanceLable text={"Loading..."} size={260} fontSize={50}/>
+
+            <SmallInfoComponent cost={monthCost} avarge={monthCostAvarge} componentX="68%"/>
+
+            <PieChartComponent cost={parseFloat(monthCost)} incomm={monthIncomm} top="-285px" left="2%" divWidth={340} divHeight={250}
+                               lableX="5%"/>
+
+         </div>
+
+          <div className='down-arear' style={downArearStyle}>
+
+            <CILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={CILSortBar()}/> 
+
+            <TrippleLineChart headLine="Monatlich" data={victoryLineData[0]}/>
+            <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop="-480px"/>
+            <Headline text={"Aspect-Ratio: " + GetAspectRatio()}/>
+
+          </div>
+        
+        </div>
+  )
+}
 export function Mobile(){
   const [openModal, setOpenModal] = useState(false)
     return( 
@@ -84,7 +119,6 @@ export function Mobile(){
             
 
           </div>
-          <Headline text={"Aspect-Ratio: " + GetAspectRatio()}/>
         
         </div>
     )

@@ -3,7 +3,7 @@ import { Headline } from "../Lable/HeadLines";
 import { bgColor3e, bgColor4e } from "../Styles/backGroundColor";
 
 export function CILComponent(props){
-    const {headlineWidth=500, headlineText="Ausgaben und Einkommen", headlineX=75, headlineY=10, bgColor1=bgColor3e, bgColor2=bgColor4e, componentX="6%", componentY=60, componentWidth=650,
+    const {headlineWidth=400, headlineText="Ausgaben und Einkommen", headlineX=75, headlineY=10, bgColor1=bgColor3e, bgColor2=bgColor4e, componentX="4%", componentY=60, componentWidth=540,
            componenHeight=600, componentRadius="10px", listBorder="3px solid #1f1f1f", listBorderRadius="10px"} = props
 
     return (
@@ -17,8 +17,8 @@ export function CILComponent(props){
             
 
             <div>
-              <div style={{display:"flex", flexDirection: "column", justifyContent:"flex-start", backgroundColor:bgColor2, width:(componentWidth-55), 
-                           height:(componenHeight-100) ,border:listBorder, borderRadius:listBorderRadius, position:"relative", top:50, left:-475, 
+              <div style={{display:"flex", flexDirection: "column", justifyContent:"flex-start", backgroundColor:bgColor2, width:(componentWidth-45), 
+                           height:(componenHeight-110), border:listBorder, borderRadius:listBorderRadius, position:"relative", top:50, left:-380, 
                            overflowY:"auto", overflowX:"hidden", direction:"rtl"}}>
               <div>
                 {props.sortBar}

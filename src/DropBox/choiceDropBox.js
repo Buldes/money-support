@@ -3,7 +3,7 @@ import { bgColor5e } from "../Styles/backGroundColor"
 import { DefaultDropBox } from "./defaultDropBox"
 
 export function InfoDropBox(props){
-    const {width="90%", height=45, fontSize=25, id="ChoiceBox", backgroundColor=bgColor5e, borderColor="black",
+    const {width="90%", height=35, fontSize=25, id="ChoiceBox", backgroundColor=bgColor5e, borderColor="black",
            borderRadius=20, text={textAlign:"center"}} = props
 
     return (

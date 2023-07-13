@@ -10,9 +10,9 @@ import { mobileDevice } from "../Data/bool";
 
 export function CILAddBar(){
     if (!mobileDevice){
-        return ( <div style={{display:"flex", flexDirection:"row", justifyContent:"flex-start", position:"relative", top:53, left:-475}}>
+        return ( <div style={{display:"flex", flexDirection:"row", justifyContent:"flex-start", position:"relative", top:53, left:-380}}>
                     <StatusDropBox id="ListDropBox" onChange={dropBoxColor}/>
-                    <AmoutInput value={inputAmout} onChange={getInputAmout} width={650-245} left={5}/>
+                    <AmoutInput value={inputAmout} onChange={getInputAmout} width={550-245} left={5}/>
                     <AddButton left={10} click={manuelAddData}/>
                 </div>)}
     

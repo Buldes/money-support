@@ -36,15 +36,13 @@ export function SettingsModal({open, onClose}, props){
 
             <div style={{left:left, top:top + between, display:"flex", position:"relative"}}>
                 <AddButton text="Neuer Nutzer" width={140} click={AddNewUser}/>
-                <DefaultInputField width={300} left={5} value={inputNewUser} onChange={getInputNewUser}/>
+                <DefaultInputField width={300} left={5} value={inputNewUser} onChange={getInputNewUser} fontSize={fontSize} placeholder="Neuer Nutzer eingeben..."/>
             </div>
 
             <div style={{left:left, top:top + between * 2, display:"flex", position:"relative"}}>
                 <AddButton text="Nutzer Unbenennen" width={200} click={RenameUser}/>
-                <DefaultInputField width={240} left={5} value={inputRenameUser} onChange={getInputRenameUser}/>
+                <DefaultInputField width={240} left={5} value={inputRenameUser} onChange={getInputRenameUser} fontSize={fontSize} placeholder="Neuer Name eingeben..."/>
             </div>
-
-            {/*<DefaultButton name="close" fontSize="20px" color="red" click={onClose}/>*/}
         </div>)}
     
     
@@ -68,15 +66,13 @@ export function SettingsModal({open, onClose}, props){
     
                 <div style={{left:left - 5, top:top + between * 2, display:"flex", position:"relative"}}>
                     <AddButton text="Neuer Nutzer" width={110} height={30} click={AddNewUser} fontSize={16}/>
-                    <DefaultInputField width={190} left={5} value={inputNewUser} onChange={getInputNewUser} fontSize={16}/>
+                    <DefaultInputField width={190} left={5} value={inputNewUser} onChange={getInputNewUser} fontSize={16} placeholder="[Neuer Nutzer]"/>
                 </div>
     
                 <div style={{left:left - 5, top:top + between * 2 + 5, display:"flex", position:"relative"}}>
                     <AddButton text="Nutzer Unbenennen" width={160} height={30} click={RenameUser} fontSize={16}/>
-                    <DefaultInputField width={140} left={5} value={inputRenameUser} onChange={getInputRenameUser} fontSize={16}/>
+                    <DefaultInputField width={140} left={5} value={inputRenameUser} onChange={getInputRenameUser} fontSize={16} placeholder="[Neuer Name]"/>
                 </div>
-    
-                {/*<DefaultButton name="close" fontSize="20px" color="red" click={onClose}/>*/}
             </div>)
     }
 }
