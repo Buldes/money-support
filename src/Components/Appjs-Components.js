@@ -75,13 +75,13 @@ export function Tablet(){
 
          </div>
 
-          <div className='down-arear' style={downArearStyle}>
+          <div className='down-arear' style={Object.assign({}, downArearStyle, {height:"1500px"})}>
 
-            <CILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={CILSortBar()}/> 
+            <CILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={CILSortBar()} componentX="20%"/> 
 
-            <TrippleLineChart headLine="Monatlich" data={victoryLineData[0]}/>
-            <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop="-480px"/>
-            <Headline text={"Aspect-Ratio: " + GetAspectRatio()}/>
+            <TrippleLineChart headLine="Monatlich" data={victoryLineData[0]} cTop={120} cLeft="17%"/>
+            <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop={160} cLeft="17%"/>
+            {/*<Headline text={"Aspect-Ratio: " + GetAspectRatio()}/>*/}
 
           </div>
         

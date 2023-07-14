@@ -17,7 +17,7 @@ function App() {
     setMobileDevice(true)
     return <Mobile/>
   }
-  else if (GetAspectRatio() <= 1.6) return <Tablet/>
+  else if (GetAspectRatio() <= 1.7) return <Tablet/>
   else{ 
     return <Laptop/> 
   }
