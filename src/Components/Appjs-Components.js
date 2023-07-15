@@ -110,12 +110,12 @@ export function Mobile(){
 
          </div>
 
-          <div className='down-arear' style={Object.assign({}, downArearStyle, {height:"700px"})}>
+          <div className='down-arear' style={Object.assign({}, downArearStyle, {height:"1500px"})}>
 
             <MobileCILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={MobileCILSortBar()}/> 
-
-            {/*<TrippleLineChart headLine="Monatlich" data={victoryLineData[0]}/>
-            <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop="-480px"/>*/}
+            
+            <TrippleLineChart headLine="Monatlich" data={victoryLineData[0]}/>
+            <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop={120}/>
             
 
           </div>

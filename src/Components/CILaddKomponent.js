@@ -17,9 +17,9 @@ export function CILAddBar(){
                 </div>)}
     
     else{
-        return ( <div style={{display:"flex", flexDirection:"row", justifyContent:"flex-start", position:"relative", top:53, left:-300}}>
+        return ( <div style={{display:"flex", flexDirection:"row", justifyContent:"flex-start", position:"relative", top:53, left:-290}}>
                 <StatusDropBox id="ListDropBox" onChange={dropBoxColor} height={30} width={100} fontSize={15}/>
-                <AmoutInput value={inputAmout} onChange={getInputAmout} width={325-150} height={25} left={5} fontSize={15}/>
+                <AmoutInput value={inputAmout} onChange={getInputAmout} width={325-170} height={25} left={5} fontSize={15}/>
                 <AddButton left={10} click={manuelAddData} width={30} height={30}/>
             </div>)
     }

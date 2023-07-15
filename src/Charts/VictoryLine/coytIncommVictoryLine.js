@@ -4,13 +4,13 @@ import React from "react";
 
 export function MultipleLinesVictoryLine(props){
     var {border="10px solid #ccc",  interpolation="basis", bg="none", lableX="", lableY="", width=500, height=250, 
-        lineColors=["transperente", bgColorGreen, bgColorR1]} = props
+        lineColors=["transperente", bgColorGreen, bgColorR1], fontSize=10} = props
 
     const { data } = props;
 
     // everything, thats in defaultVictoryLines has to be here because of sysntax
     return (
-        <VictoryChart minDomain={{ y: 0 }} width={width} height={height} style={{background: { fill:bg}}}>
+        <VictoryChart minDomain={{ y: 0 }} width={width} height={height} style={{background: { fill:bg}}} >
         
         <VictoryAxis
         // headline for X
@@ -18,7 +18,7 @@ export function MultipleLinesVictoryLine(props){
         // style
         style={{
           axisLabel: { padding: 30},
-          tickLabels: { fontSize: 10, fill:"white"}
+          tickLabels: { fontSize: fontSize, fill:"white"}
         }}
       />
       <VictoryAxis
@@ -28,10 +28,9 @@ export function MultipleLinesVictoryLine(props){
         // style
         style={{
           axisLabel: { padding: 40 },
-          tickLabels: { fontSize: 10, fill:"white"}
+          tickLabels: { fontSize: fontSize, fill:"white"}
         }}
       />
-
         {data.map((lineData, index) => (
             <VictoryLine 
             animate={{

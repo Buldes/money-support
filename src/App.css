@@ -57,3 +57,9 @@ li {
 ::-webkit-scrollbar-corner {
   background-color: #0a0a0a;
 }
+
+.VictoryContainer {
+  user-select: auto !important;
+  pointer-events: auto !important;
+  touch-action: auto !important;
+  }

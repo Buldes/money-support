@@ -52,7 +52,7 @@ export function MobileCILComponent(props){
 
           <div>
             <div style={{display:"flex", flexDirection: "column", justifyContent:"flex-start", backgroundColor:bgColor2, width:(componentWidth-25), 
-                         height:(componenHeight-55) ,border:listBorder, borderRadius:listBorderRadius, position:"relative", top:40, left:-290, 
+                         height:(componenHeight-100) ,border:listBorder, borderRadius:listBorderRadius, position:"relative", top:40, left:-290, 
                          overflowY:"auto", overflowX:"hidden", direction:"rtl"}}>
             <div>
               {props.sortBar}
