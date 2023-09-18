@@ -1,6 +1,7 @@
 # Money-Support
 ## Link: [Money-Support](https://buldes.github.io/money-support/)
 
+
 What is Money-Support?
 ---
 Money-Support is an open-source website that helps you keep track of your money.
@@ -10,6 +11,13 @@ It provides helpful information about your income, expenses, and current bank ba
 It is easy, free, and safe to use. You don't need to register, and your data will be saved locally on your device, not on a server.
 
 ---
+
+## Important things
+Names, that ar nort allowed to use:
+1. menu
+2. bg
+3. color
+4. choice
 
 Future Plans
 ---
