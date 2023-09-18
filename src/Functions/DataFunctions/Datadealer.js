@@ -25,8 +25,11 @@ export function SetCurrentChoice(key){
 export function GetData(data_key){
     // set existed Keys
     var keys = Object.keys(localStorage);
-    // remove "choice", before set
+    // remove "choice" and other not usable, before set
     keys = keys.filter(item => item !== "choice")
+    keys = keys.filter(item => item !== "menu")
+    keys = keys.filter(item => item !== "bg")
+    keys = keys.filter(item => item !== "color")
     // check if none
     if (keys.length === 0) keys = ["NewUser"]
     // set current choice at the beginning

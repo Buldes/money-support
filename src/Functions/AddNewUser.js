@@ -3,6 +3,9 @@ import { inputNewUser } from "./getInput";
 
 export function AddNewUser(){
     if (inputNewUser === "choice") alert("Dieser Nutzername darf nicht gewählt werden!")
+    else if (inputNewUser === "menu") alert("Dieser Nutzername darf nicht gewählt werden!")
+    else if (inputNewUser === "color") alert("Dieser Nutzername darf nicht gewählt werden!")
+    else if (inputNewUser === "bg") alert("Dieser Nutzername darf nicht gewählt werden!")
     
     else if (inputNewUser === undefined){
         alert("Bitte gebe einen neuen Nutzer ein.")
