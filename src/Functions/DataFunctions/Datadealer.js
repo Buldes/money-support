@@ -30,6 +30,7 @@ export function GetData(data_key){
     keys = keys.filter(item => item !== "menu")
     keys = keys.filter(item => item !== "bg")
     keys = keys.filter(item => item !== "color")
+    keys = keys.filter(item => item !== "bookMarks")
     // check if none
     if (keys.length === 0) keys = ["NewUser"]
     // set current choice at the beginning
