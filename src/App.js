@@ -5,6 +5,7 @@ import { BankBalanceLableUdate } from './Functions/UpdateKomponentsUpArear';
 import { Laptop, Mobile, Tablet } from './Components/Appjs-Components';
 import { GetAspectRatio } from './Functions/sreen';
 import { setMobileDevice } from './Data/bool';
+import { Helmet } from 'react-helmet';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     return (
       <div>
 
-        <>
+        <Helmet>
           <script 
             async 
             src="https://www.googletagmanager.com/gtag/js?id=G-BDSBMQWQ9R"/>
@@ -30,7 +31,7 @@ function App() {
               gtag('js', new Date());
                 
               gtag('config', 'G-BDSBMQWQ9R');`}}/>
-        </>
+        </Helmet>
 
         <Mobile/>
       </div>
@@ -40,7 +41,7 @@ function App() {
     return (
       <div>
         
-        <>
+        <Helmet>
           <script 
             async 
             src="https://www.googletagmanager.com/gtag/js?id=G-BDSBMQWQ9R"/>
@@ -51,7 +52,7 @@ function App() {
               gtag('js', new Date());
                 
               gtag('config', 'G-BDSBMQWQ9R');`}}/>
-        </>
+        </Helmet>
 
         <Tablet/>
       </div>
@@ -61,7 +62,7 @@ function App() {
     return (
       <div>
         
-        <>
+        <Helmet>
           <script 
             async 
             src="https://www.googletagmanager.com/gtag/js?id=G-BDSBMQWQ9R"/>
@@ -72,7 +73,7 @@ function App() {
               gtag('js', new Date());
                 
               gtag('config', 'G-BDSBMQWQ9R');`}}/>
-        </>
+        </Helmet>
 
         <Laptop/>
       </div>
