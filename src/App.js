@@ -6,20 +6,77 @@ import { Laptop, Mobile, Tablet } from './Components/Appjs-Components';
 import { GetAspectRatio } from './Functions/sreen';
 import { setMobileDevice } from './Data/bool';
 
+
 function App() {
   useEffect(() => { 
     document.title = `Money Support`; 
     BankBalanceLableUdate()});
   
     Initialization()
-
+    
   if (GetAspectRatio() <= 1) {
     setMobileDevice(true)
-    return <Mobile/>
+    return (
+      <div>
+
+        <>
+          <script 
+            async 
+            src="https://www.googletagmanager.com/gtag/js?id=G-BDSBMQWQ9R"/>
+          <script 
+            dangerouslySetInnerHTML={{ __html:`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+                
+              gtag('config', 'G-BDSBMQWQ9R');`}}/>
+        </>
+
+        <Mobile/>
+      </div>
+      )
   }
-  else if (GetAspectRatio() <= 1.7) return <Tablet/>
+  else if (GetAspectRatio() <= 1.7) {
+    return (
+      <div>
+        
+        <>
+          <script 
+            async 
+            src="https://www.googletagmanager.com/gtag/js?id=G-BDSBMQWQ9R"/>
+          <script 
+            dangerouslySetInnerHTML={{ __html:`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+                
+              gtag('config', 'G-BDSBMQWQ9R');`}}/>
+        </>
+
+        <Tablet/>
+      </div>
+      )
+  }
   else{ 
-    return <Laptop/> 
+    return (
+      <div>
+        
+        <>
+          <script 
+            async 
+            src="https://www.googletagmanager.com/gtag/js?id=G-BDSBMQWQ9R"/>
+          <script 
+            dangerouslySetInnerHTML={{ __html:`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+                
+              gtag('config', 'G-BDSBMQWQ9R');`}}/>
+        </>
+
+        <Laptop/>
+      </div>
+      )
   }
 }
 
