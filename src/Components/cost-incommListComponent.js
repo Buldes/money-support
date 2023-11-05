@@ -37,12 +37,12 @@ export function CILComponent(props){
 
 
 export function MobileCILComponent(props){
-  const {headlineText="Ausgaben und Einkommen", headlineX=10, headlineY=10, bgColor1=bgColor3e, bgColor2=bgColor4e, componentX="3%", componentY=30, componentWidth=325,
+  const {headlineText="Ausgaben und Einkommen", headlineX=10, headlineY=10, bgColor1=bgColor3e, bgColor2=bgColor4e, componentY=30, componentWidth=325,
          componenHeight=500, componentRadius="10px", listBorder="3px solid #1f1f1f", listBorderRadius="10px"} = props
 
   return (
-      <div style={{display:"flex", position:"relative", justifyContent:"flex-start", backgroundColor:bgColor1, width:componentWidth, height:componenHeight,
-                   top:componentY, left:componentX, borderRadius:componentRadius}}>
+      <div style={{display:"flex", position:"relative", backgroundColor:bgColor1, width:componentWidth, height:componenHeight,
+                   top:componentY, borderRadius:componentRadius}}>
 
           <div>
               <Headline  text={headlineText} width={componentWidth-25} top={headlineY} left={headlineX} fontSize="20px"/>

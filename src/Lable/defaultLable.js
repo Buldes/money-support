@@ -12,5 +12,7 @@ export function DefaultLable(props){
         fontSize:props.fontSize,
         backgroundColor:props.color,
         textAlign:props.textAlign,
+        marginLeft:props.marginLeft,
+        marginRight:props.marginRight,
         display:"flex", ...styleTypL}} >{props.text}</label>
 }

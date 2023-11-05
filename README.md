@@ -14,10 +14,14 @@ It is easy, free, and safe to use. You don't need to register, and your data wil
 
 ## Important things
 Names, that ar nort allowed to use:
-1. menu
-2. bg
-3. color
-4. choice
+- choice
+- menu
+- bg
+- color
+- bookMarks
+- bookMarkColor
+- searchBarColor
+- defaultInterpolation
 
 Future Plans
 ---

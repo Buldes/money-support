@@ -16,6 +16,7 @@ import { InfoDropBox } from "../DropBox/choiceDropBox"
 import { SettingsModal } from "../Modal/SettingsModal"
 import { IconButton } from "../Buttons/IconButton"
 import { faGear } from '@fortawesome/free-solid-svg-icons'
+import { centeringX } from "../Styles/TextStyles"
 
 export function Laptop(){
   const [openModal, setOpenModal] = useState(false)
@@ -112,7 +113,9 @@ export function Mobile(){
 
           <div className='down-arear' style={Object.assign({}, downArearStyle, {height:"1500px"})}>
 
-            <MobileCILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={MobileCILSortBar()}/> 
+            <div style={centeringX}>
+              <MobileCILComponent addBar={CILAddBar()} generateList={GenerateCIL()} sortBar={MobileCILSortBar()}/> 
+            </div>
             
             <TrippleLineChart headLine="Monatlich" data={victoryLineData[0]}/>
             <TrippleLineChart headLine="Jährlich" data={victoryLineData[1]} cTop={120}/>

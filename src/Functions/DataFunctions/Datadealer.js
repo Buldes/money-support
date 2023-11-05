@@ -1,4 +1,5 @@
-import { exampleData, setExistedKeys } from "../../Data/list";
+import { exampleData, lineChartInterpolation, setExistedKeys } from "../../Data/list";
+import { defaultInterpolation, setDefaultInterpolation } from "../../Data/str";
 
 export function SaveData(data_key){
     localStorage.setItem(data_key, JSON.stringify(exampleData))
@@ -31,11 +32,14 @@ export function GetData(data_key){
     keys = keys.filter(item => item !== "bg")
     keys = keys.filter(item => item !== "color")
     keys = keys.filter(item => item !== "bookMarks")
+    keys = keys.filter(item => item !== "bookMarkColor")
+    keys = keys.filter(item => item !== "searchBarColor")
+    keys = keys.filter(item => item !== "defaultInterpolation")
     // check if none
     if (keys.length === 0) keys = ["NewUser"]
     // set current choice at the beginning
     const index = keys.indexOf(GetCurrentChoice())
-    if (index === -1) keys.push(GetCurrentChoice()) // add Get corrent choice, if its not existing jet
+    if (index === -1) keys.push(GetCurrentChoice()) // add Get current choice, if its not existing jet
     keys.splice(index, 1)  // delete the choice of the list
     keys.unshift(GetCurrentChoice())
     // set existed key
@@ -59,4 +63,22 @@ export function Rename(newName){
     SetCurrentChoice(newName)
     // reload
     window.location.reload()
+}
+
+export function GetDefaultInterpolation(){
+    setDefaultInterpolation(localStorage.getItem("defaultInterpolation"))
+
+    if (defaultInterpolation === null){
+        setDefaultInterpolation("basis")
+        localStorage.setItem("defaultInterpolation", defaultInterpolation)
+    }
+
+    // sort list amde out of al interpolation variants for the drop box
+    const index = lineChartInterpolation.indexOf(defaultInterpolation)
+    lineChartInterpolation.splice(index, 1)
+    lineChartInterpolation.unshift(defaultInterpolation)
+}
+
+export function SaveDefaultInterpolation(){
+    localStorage.setItem("defaultInterpolation", defaultInterpolation)
 }

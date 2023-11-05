@@ -29,3 +29,9 @@ export var existed_keys = []
 export const setExistedKeys = (value) => {
     existed_keys = value
 }
+
+export var lineChartInterpolation  = [ "basis", "bundle", "cardinal", "catmullRom", "linear", "monotoneX", "monotoneY", "natural", "step", "stepAfter", "stepBefore"]
+
+export var SetLineChartInterpolation = (value) => {
+    lineChartInterpolation = value
+}
