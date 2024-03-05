@@ -4,16 +4,18 @@
 
 What is Money-Support?
 ---
-Money-Support is an open-source website that helps you keep track of your money.
+Money Support is an open-source application designed to assist you in managing your finances. It is accessible on all devices through the mobile app or the website (more platforms are coming soon, including program for PC).
 
-It provides helpful information about your income, expenses, and current bank balance.
+The application offers valuable insights into your income, expenses, and current bank balance. It's user-friendly, free of charge, and ensures the security of your data. There's no need for registration, and your information remains stored locally on your device rather than on a server.
 
-It is easy, free, and safe to use. You don't need to register, and your data will be saved locally on your device, not on a server.
+You have the flexibility to add new users for youre purposes such as cash, credit cards, and projects. There is no limit to the number of users you can add.
+
+In this repository, you'll find the web app. You can also check out the mobile application [here](https://github.com/Buldes/Money-Support-Mobile_App).
 
 ---
 
 ## Important things
-Names, that ar nort allowed to use:
+Names, that are not allowed to use on web:
 - choice
 - menu
 - bg
@@ -22,88 +24,3 @@ Names, that ar nort allowed to use:
 - bookMarkColor
 - searchBarColor
 - defaultInterpolation
-
-Future Plans
----
-Money-Support is currently in development, but you can use it now.
-
-I will be adding new features, fixing bugs, and optimizing it for mobile devices.
-
-The website works on every device, but you need the right aspect ratio for the elements to display correctly. Otherwise, it may appear messy.
-
----
----
-
-## Now the react part:
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
