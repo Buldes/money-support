@@ -4,9 +4,9 @@
 
 What is Money-Support?
 ---
-Money Support is an open-source application designed to assist you in managing your finances. It is accessible on all devices through the mobile app or the website (more platforms are coming soon, including program for PC).
+Money Support is an open-source application designed to **assist you in managing your finances**. It is accessible on **all devices** through the 【mobile app】(https://github.com/Buldes/Money-Support-Mobile_App) or the [website](https://buldes.github.io/money-support/) (more platforms are coming soon, including program for PC).
 
-The application offers valuable insights into your income, expenses, and current bank balance. It's user-friendly, free of charge, and ensures the security of your data. There's no need for registration, and your information remains stored locally on your device rather than on a server.
+The application offers valuable insights into your **income, expenses, and current bank balance**. It's **user-friendly, free of charge, and ensures the security of your data**. There's **no need for registration**, and your information remains stored locally on your device rather than on a server.
 
 You have the flexibility to add new users for youre purposes such as cash, credit cards, and projects. There is no limit to the number of users you can add.
 
